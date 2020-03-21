@@ -5,7 +5,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./data:/var/lib/postgresql
+      - ./data_pg:/var/lib/postgresql
     environment:
       - POSTRGRES_RANDOM_ROOT_PASSWORD=yes
       - POSTGRES_DB=app
@@ -16,7 +16,7 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data_mysql:/var/lib/mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=app
